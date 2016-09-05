@@ -1,0 +1,11 @@
+[package]
+name = "ccv"
+version = "0.1.0"
+authors = ["David Rajchenbach-Teller <david.teller@univ-orleans.fr>"]
+build = "build.rs"
+
+[dependencies]
+libc = "0.2"
+
+[build-dependencies]
+pkg-config = "0.3"
