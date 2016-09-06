@@ -40,61 +40,32 @@ pub enum Coordinate {
 
 #[repr(C)]
 pub struct SwtParams {
-    interval: c_int,
-    min_neighbors: c_int,
-    scale_invariant: c_int,
-    direction: c_int,
-    same_word_thresh: [c_double; 2],
+    pub interval: c_int,
+    pub min_neighbors: c_int,
+    pub scale_invariant: c_int,
+    pub direction: c_int,
+    pub same_word_thresh: [c_double; 2],
 
-    size: c_int,
-    low_thresh: c_int,
-    high_thresh: c_int,
-    max_height: c_int,
-    min_height: c_int,
-    min_area: c_int,
-    letter_occlude_thresh: c_int,
-    aspect_ratio: c_double,
-    std_ratio: c_double,
-    thickness_ratio: c_double,
-    height_ratio: c_double,
-    intensity_thresh: c_int,
-    distance_ratio: c_double,
-    intersect_ratio: c_double,
-    elongate_ratio: c_double,
-    letter_thresh: c_int,
-    breakdown: c_int,
-    breakdown_ratio: c_double,
+    pub size: c_int,
+    pub low_thresh: c_int,
+    pub high_thresh: c_int,
+    pub max_height: c_int,
+    pub min_height: c_int,
+    pub min_area: c_int,
+    pub letter_occlude_thresh: c_int,
+    pub aspect_ratio: c_double,
+    pub std_ratio: c_double,
+    pub thickness_ratio: c_double,
+    pub height_ratio: c_double,
+    pub intensity_thresh: c_int,
+    pub distance_ratio: c_double,
+    pub intersect_ratio: c_double,
+    pub elongate_ratio: c_double,
+    pub letter_thresh: c_int,
+    pub breakdown: c_int,
+    pub breakdown_ratio: c_double,
 }
 
-impl Default for SwtParams {
-    fn default() -> Self {
-        SwtParams {
-            direction: 1,
-            interval: 1,
-            same_word_thresh: [ 0.1, 0.8 ],
-            min_neighbors: 1,
-            scale_invariant: 0,
-            size: 3,
-            low_thresh: 124,
-            high_thresh: 204,
-            max_height: 300,
-            min_height: 8,
-            min_area: 38,
-            letter_occlude_thresh: 3,
-            aspect_ratio: 8.,
-            std_ratio: 0.83,
-            thickness_ratio: 1.5,
-            height_ratio: 1.7,
-            intensity_thresh: 31,
-            distance_ratio: 2.9,
-            intersect_ratio: 1.3,
-            letter_thresh: 3,
-            elongate_ratio: 1.9,
-            breakdown: 1,
-            breakdown_ratio: 1.0,
-        }
-    }
-}
 
 #[repr(C)]
 #[derive(Clone)]
@@ -113,14 +84,6 @@ pub struct Array {
 pub struct Classification {
     pub id: c_int,
     pub confidence: c_float,
-}
-
-#[repr(C)]
-#[derive(Clone)]
-pub struct Comp {
-    pub rect: Rect,
-    pub neighbors: c_int,
-    pub classification: Classification
 }
 
 #[repr(C)]
