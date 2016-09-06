@@ -3,6 +3,11 @@ name = "ccv"
 version = "0.1.0"
 authors = ["David Rajchenbach-Teller <david.teller@univ-orleans.fr>"]
 build = "build.rs"
+description = "Idiomatic bindings for the CCV C image-processing library."
+repository = "https://github.com/Yoric/ccv.rs"
+readme = "README.md"
+keywords = ["bindings", "image"]
+license = "MPL-2.0"
 
 [dependencies]
 libc = "0.2"
