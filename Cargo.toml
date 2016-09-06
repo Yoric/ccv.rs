@@ -8,6 +8,7 @@ repository = "https://github.com/Yoric/ccv.rs"
 readme = "README.md"
 keywords = ["bindings", "image"]
 license = "MPL-2.0"
+exclude = ["ccv/site/*"]
 
 [dependencies]
 libc = "0.2"
